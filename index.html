@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#14467f">
+  <title>فري فلو | طوابير عبّارة بورسعيد – بورفؤاد</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="top-text">
+      <img class="logo" src="logo.svg" alt="شعار فري فلو">
+      <h1>فري فلو</h1>
+      <p>نظام ذكي لإدارة طوابير العبّارات · بورسعيد ⇄ بورفؤاد</p>
+    </div>
+    <img class="scene" src="scene.svg" alt="">
+  </header>
+
+  <main>
+    <section id="demoBanner" class="banner hidden">وضع تجريبي: البيانات المعروضة وهمية</section>
+    <section id="staleBanner" class="banner warn hidden">تحذير: البيانات قديمة، قد يكون هناك عطل في الحساسات</section>
+
+    <section class="card ferry-status" id="ferryStatus" data-state="open">
+      <div class="dot"></div>
+      <div>
+        <div class="label">حالة العبّارة</div>
+        <div class="st" id="ferryState">--</div>
+        <div class="msg" id="ferryMsg"></div>
+      </div>
+    </section>
+
+    <section class="card main-card" id="statusCard" data-level="low">
+      <div class="label">السيارات المنتظرة الآن</div>
+      <div class="big"><span id="waiting">--</span></div>
+      <div class="pill" id="statusText">جاري التحميل...</div>
+    </section>
+
+    <section class="grid">
+      <div class="card small">
+        <div class="label">وقت الانتظار المتوقع</div>
+        <div class="val"><span id="wait">--</span> <small>دقيقة</small></div>
+      </div>
+      <div class="card small">
+        <div class="label">سيارات تم تحميلها اليوم</div>
+        <div class="val"><span id="loaded">--</span></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>الزحمة على مدار اليوم</h2>
+      <div id="chart" class="chart"></div>
+      <p class="hint">متوسط عدد السيارات المنتظرة في كل ساعة</p>
+    </section>
+
+    <section class="card">
+      <h2>نصيحة الآن</h2>
+      <p id="tip">--</p>
+    </section>
+
+    <section class="card">
+      <h2>مواعيد التشغيل</h2>
+      <ul class="list" id="scheduleList"></ul>
+    </section>
+
+    <section class="card">
+      <h2>الأسعار</h2>
+      <ul class="list" id="faresList"></ul>
+    </section>
+
+    <section class="actions">
+      <a class="btn" id="mapsBtn" target="_blank" rel="noopener">الطريق للعبّارة</a>
+      <button class="btn alt" id="notifyBtn">تفعيل التنبيهات</button>
+    </section>
+
+    <p class="updated">آخر تحديث: <span id="updated">--</span></p>
+    <button id="installBtn" class="install hidden">تثبيت التطبيق على الموبايل</button>
+  </main>
+
+  <footer>مشروع «فري فلو» · عبّارة بورسعيد – بورفؤاد</footer>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
