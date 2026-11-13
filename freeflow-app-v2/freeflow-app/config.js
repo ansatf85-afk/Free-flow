@@ -1,7 +1,7 @@
 // ====== إعدادات التطبيق — عدّل هنا بس ======
 window.CONFIG = {
   // رابط Google Apps Script (بعد النشر كـ Web app). سيبه فاضي لتشغيل الوضع التجريبي.
-  API_URL: "",          // مع الباك إند: "/api/status" أو "https://موقعك/api/status"
+  API_URL: "https://script.google.com/macros/s/..../exec",          // مع الباك إند: "/api/status" أو "https://موقعك/api/status"
   REPORT_URL: "",       // مع الباك إند: "/api/report". فاضي = البلاغات تجريبية محلياً
 
   REFRESH_SECONDS: 10,   // كل كام ثانية يحدّث البيانات
