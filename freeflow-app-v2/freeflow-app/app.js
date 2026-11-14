@@ -21,7 +21,7 @@ var lastReportTime = 0; // عشان نمنع السبام في زراير الب
 // ==========================================
 function load() {
   return new Promise((resolve) => {
-const carRef = ref(db, '/');
+const carRef = ref(db, 'carCount');
     
     // onValue بتخلي الموقع يسمع أي تحديث بيحصل في Firebase
     onValue(carRef, (snapshot) => {
