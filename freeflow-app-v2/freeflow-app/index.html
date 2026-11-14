@@ -71,17 +71,6 @@
     </section>
 
     <section class="card">
-      <h2>بلّغ عن الوضع الحالي</h2>
-      <div class="reports">
-        <button data-r="long_queue">🚗 الطابور طويل <b id="r_long_queue">0</b></button>
-        <button data-r="short_queue">✅ الطابور قصير <b id="r_short_queue">0</b></button>
-        <button data-r="ferry_stopped">⛔ العبّارة واقفة <b id="r_ferry_stopped">0</b></button>
-        <button data-r="ferry_running">⛴️ العبّارة شغّالة <b id="r_ferry_running">0</b></button>
-      </div>
-      <p class="hint" id="reportMsg">بلاغات المستخدمين آخر 30 دقيقة</p>
-    </section>
-
-    <section class="card">
       <h2>مواعيد التشغيل</h2>
       <ul class="list" id="scheduleList"></ul>
     </section>
@@ -89,6 +78,17 @@
     <section class="card">
       <h2>الأسعار</h2>
       <ul class="list" id="faresList"></ul>
+    </section>
+
+    <section class="card">
+      <h2>بلّغ عن الوضع الحالي</h2>
+      <div class="reports">
+        <button data-r="jam">🚗 الطابور طويل <span id="r_jam">0</span></button>
+        <button data-r="clear">✅ الطابور قصير <span id="r_clear">0</span></button>
+        <button data-r="stopped">⛔ العبّارة واقفة <span id="r_stopped">0</span></button>
+        <button data-r="running">⛴️ العبّارة شغّالة <span id="r_running">0</span></button>
+      </div>
+      <p class="hint">بلاغات المستخدمين</p>
     </section>
 
     <section class="actions">
@@ -103,8 +103,7 @@
 
   <footer>مشروع «فري فلو» · عبّارة بورسعيد – بورفؤاد</footer>
 
-<script src="config.js"></script>
-<script type="module" src="app.js"></script>
-
+  <script src="config.js"></script>
+ <script type="module" src="app.js"></script>
 </body>
 </html>
